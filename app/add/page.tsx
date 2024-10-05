@@ -1,15 +1,24 @@
 "use client"
 import { useRef } from "react"
-
+import axios from "axios";
+import { useRouter } from "next/navigation";
 
 export default function add() {
+
     const titleRef = useRef<HTMLInputElement>(null);
     const contentRef = useRef<HTMLTextAreaElement>(null);
-    async function submitHandler(){
-        
+    const router = useRouter();
+
+    async function submitHandler() {
+        const title = titleRef.current?.value;
+        const content = contentRef.current?.value;
+        await axios.post('/api/add', {
+            title,
+            content
+        })
+        router.push('/');
     }
     return (
-
         <div>
             <label className="form-control w-full max-w-xs">
                 <div className="label">
@@ -34,6 +43,7 @@ export default function add() {
                 />
             </label>
             <button onClick={submitHandler} className="btn btn-sm btn-success text-black mt-3">Add Notes</button>
+
         </div>
     )
 }
