@@ -5,29 +5,29 @@ export function HomePage() {
                 <table className="table text-center">
                     {/* head */}
                     <thead>
-                        <tr>
+                        <tr className="font-bold text-sm">
                             <th>Name</th>
                             <th>Job</th>
                             <th>Favorite Color</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody className="font-bold ">
                         {/* row 1 */}
                         <tr>
                             <td>Cy Ganderton</td>
-                            <td>Quality Control Specialist</td>
+                            <td className="text-[15px] lg:text-[17px]">Quality Control Specialist</td>
                             <td><button className="btn btn-success btn-xs px-2 lg:px-4 text-sm">more..</button></td>
                         </tr>
                         {/* row 2 */}
-                        <tr className="hover">
+                        <tr >
                             <td>Hart Hagerty</td>
-                            <td>Desktop Support Technician</td>
+                            <td className="text-[15px] lg:text-[17px]">Desktop Support Technician</td>
                             <td><button className="btn btn-success btn-xs px-2 lg:px-4 text-sm">more..</button></td>
                         </tr>
                         {/* row 3 */}
                         <tr>
                             <td>Brice Swyre</td>
-                            <td>Tax Accountant</td>
+                            <td className="text-[15px] lg:text-[17px]">Tax Accountant</td>
                             <td><button className="btn btn-success btn-xs px-2 lg:px-4 text-sm">more..</button></td>
                         </tr>
                     </tbody>
